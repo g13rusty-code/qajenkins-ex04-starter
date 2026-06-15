@@ -7,7 +7,7 @@ pipeline {
   stages {
     stage("Docker Build") {
       steps {
-        scriopt {
+        script {
         dockerImage = docker.build(registry)
         dockerImage.tag("${env.BUILD_NUMBER}")
       }
